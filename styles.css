@@ -1,0 +1,139 @@
+/* Background and page styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Centered container for the chat */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Chat container styles */
+.chat-container {
+    width: 400px;
+    height: 500px;
+    background-color: #1e1e1e; /* Dark gray background */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(-50px); /* Initial upward position for animation */
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Header styles */
+.header {
+    background-color: #333; /* Darker gray header */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Chatbox styles */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #444; /* Darker border */
+    background-color: #2b2b2b; /* Slightly lighter gray for messages area */
+    font-size: 14px;
+    color: white;
+}
+
+/* Input area styles */
+.input-area {
+    display: flex;
+    border-top: 1px solid #444; /* Darker border */
+    padding: 10px;
+    background-color: #2b2b2b; /* Same color as chat box */
+}
+
+/* Input field styles */
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    outline: none;
+    color: white;
+    background-color: #444; /* Darker background for input */
+    transition: all 0.3s ease;
+}
+
+/* Input field hover effect */
+input:focus {
+    background-color: #555; /* Lighter background on focus */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Message styles */
+.message {
+    padding: 8px 15px;
+    margin: 10px 0;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+    transition: all 0.3s ease;
+}
+
+.user-message {
+    background-color: #1d7ed1; /* Blue for user messages */
+    text-align: right;
+    margin-left: auto;
+    animation: bounce 0.5s ease-out;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    color: black;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animation for chat container */
+@keyframes slideIn {
+    from { transform: translateY(-50px); }
+    to { transform: translateY(0); }
+}
+
+/* Animation for user messages */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+}
