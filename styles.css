@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: #000; /* Black background */
+    background: linear-gradient(135deg, #ff4d4d, #000); /* Red to Black gradient */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ body {
 
 /* Header styles */
 .header {
-    background-color: #333; /* Darker gray header */
+    background-color: #ff3333; /* Red header */
     padding: 20px;
     color: white;
     text-align: center;
@@ -82,7 +82,7 @@ input:focus {
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #4CAF50; /* Green button */
+    background-color: #ff3333; /* Red button */
     color: white;
     font-weight: bold;
     border-radius: 20px;
@@ -92,7 +92,7 @@ button {
 
 /* Button hover effect */
 button:hover {
-    background-color: #45a049;
+    background-color: #ff4d4d; /* Lighter red on hover */
     transform: scale(1.1); /* Slight zoom effect */
 }
 
@@ -136,4 +136,19 @@ button:hover {
     0% { transform: translateY(0); }
     30% { transform: translateY(-10px); }
     50% { transform: translateY(0); }
+}
+
+/* Typing cursor animation for the bot */
+.typing-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 18px;
+    background-color: white;
+    animation: typing 0.8s infinite step-end;
+}
+
+@keyframes typing {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
